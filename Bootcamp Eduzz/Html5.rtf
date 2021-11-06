@@ -1,0 +1,117 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\ul\b\f0\fs36\lang22 HTML5\par
+\ulnone\fs24 Defini\'e7\'e3o e estrutura b\'e1sica\b0\fs22\par
+Em 1991 Tim Berners-Lee criou essa linguagem de marca\'e7\'e3o para melhorar a comunica\'e7\'e3o entre ele e seus colegas de trabalho no CERN, desde ent\'e3o j\'e1 surgiram 5 vers\'f5es e o HTML se tornou a base da web.\par
+Com o HTML definimos o significado e a estrutura do conte\'fado da web e, al\'e9m de texto, nossas p\'e1ginas precisam de imagens, v\'eddeos e v\'e1rios outros formatos e para isso temos os elementos HTML.\par
+Um elemento HTML \'e9 formado pela tag de abertura e seus atributos, o conte\'fado e uma tag de fechamento. E mais a frente veremos que existem elementos que n\'e3o tem tag de fechamento.\par
+Com esses elementos podemos agrupar tipos de conte\'fado, alterar tamanho e forma de fontes e adicionar diferentes m\'eddias ao nossa p\'e1gina na web.\par
+\par
+\b E agora podemos ver como \'e9 a estrutura b\'e1sica de um arquivo HTML.\par
+\b0 A primeira linha do documento deve ser o \b\i <!DOCTYPE html>\b0\i0 , apesar de parecer um elemento HTML ela apenas diz ao navegador que ele est\'e1 lidando com um arquivo do tipo HTML5. Os elementos HTML vem logo abaixo.\par
+\i\fs24\par
+\b <html>\par
+\b0\i0\fs22 A tag html \'e9 a raiz do seu documento, todos os elementos HTML devem estar dentro dela. E nela n\'f3s informamos ao navegador qual \'e9 o idioma desse nosso documento, atrav\'e9s do atributo lang, para o portugu\'eas brasileiro usamos pt-BR.\par
+\par
+\b\fs24 <head>\par
+\b0\fs22 A tag head cont\'e9m elementos que ser\'e3o lidos pelo navegador, como os metadados - um exemplo \'e9 o charset, que \'e9 a codifica\'e7\'e3o de caracteres e a mais comum \'e9 a UTF-8, o JavaScript com a tag script, o CSS atrav\'e9s das tags style e link - veremos a diferen\'e7a quando falarmos sobre CSS - e o t\'edtulo da p\'e1gina com a tag title.\par
+\par
+\b\fs24 <body>\par
+\b0\fs22 E dentro da tag body colocamos todo o conte\'fado vis\'edvel ao usu\'e1rio: textos, imagens, v\'eddeos.\par
+\par
+Pr\'e1tica\par
+Como exerc\'edcio para esse curso iremos construir um site pessoal, e precisamos come\'e7ar com a estrutura b\'e1sica que acabamos de ver.\par
+Vamos criar um arquivo index.html e adicionar o doctype e os elementos html, head e body.\par
+Depois adicionaremos os elementos meta e title, no primeiro adicionamos o atributo charset com o valor UTF-8 para dizer ao navegador qual \'e9 a codifica\'e7\'e3o dos caracteres e no segundo podemos colocar nosso nome.\par
+E por \'faltimo escreveremos nosso nome dentro do elemento body apenas para enxergarmos isso no navegador.\par
+\par
+\ul\b\fs28 Sem\'e2ntica\b0\fs22\par
+\ulnone Durante muitos anos o elemento padr\'e3o no HTML era a div, constru\'edamos nosso conte\'fado todo baseado nela, e assim nascia a sopa de divs.\par
+Mas em 2014 saiu a quinta vers\'e3o do HTML, e com ela vieram v\'e1rios mudan\'e7as importantes, como performance e acessibilidade, mas nesse curso introdut\'f3rio vamos focar na sem\'e2ntica.\par
+A sem\'e2ntica nos permite descrever mais precisamente o nosso conte\'fado, agora um bloco de texto n\'e3o \'e9 apenas uma div, agora \'e9 um article e tem mais significado assim. E temos v\'e1rios elementos para ressignificar as divs:\par
+\par
+\b\fs24 <section>\par
+\b0\fs22 Representa uma se\'e7\'e3o gen\'e9rica de conte\'fado quando n\'e3o houver um elemento mais espec\'edfico para isso.\par
+\par
+\b\fs24 <header>\par
+\b0\fs22\'c9 o cabe\'e7alho da p\'e1gina ou de uma se\'e7\'e3o da p\'e1gina e normalmente cont\'e9m logotipos, menus, campos de busca.\par
+\par
+\b\fs24 <article>\par
+\b0\fs22 Representa um conte\'fado independente e de maior relev\'e2ncia dentro de uma p\'e1gina, como um post de blog, uma not\'edcia em uma barra lateral ou um bloco de coment\'e1rios. Um article pode conter outros elementos, como header, cabe\'e7alhos, par\'e1grafos e imagens.\par
+\par
+\b\fs24 <aside>\par
+\b0\fs22\'c9 uma se\'e7\'e3o que engloba conte\'fados relacionados ao conte\'fado principal, como artigos relacionados, biografia do autor e publicidade. Normalmente s\'e3o representadas como barras laterais.\par
+\par
+\b\fs24 <footer>\par
+\b0\fs22 Esse elemento representa o rodap\'e9 do conte\'fado ou de parte dele, pois ele \'e9 aceito dentro de v\'e1rios elementos, como article e section e at\'e9 do body. Exemplos de conte\'fado de um <footer> s\'e3o informa\'e7\'f5es de autor e links relacionados.\par
+\par
+\b\fs24 <h1>-<h6>\par
+\b0\fs22 Eles n\'e3o foram criados na vers\'e3o 5 do HTML e nem s\'e3o espec\'edficos para sem\'e2ntica, mas servem para esse prop\'f3sito. S\'e3o utilizados para marcar a import\'e2ncia dos t\'edtulos, sendo \b <h1> \b0 o mais importante e \b <h6> \b0 o menos. Uma dica: use apenas um <h1> por p\'e1gina, pois ele representa o objetivo da sua p\'e1gina.\par
+\par
+Pr\'e1tica\par
+Dando continuidade ao nosso site iremos montar sua estrutura. Pensei em adicionarmos um cabe\'e7alho com nosso nome, uma lista de posts (como um blog) e um rodap\'e9 para nossos contatos.\par
+Vamos abrir nosso arquivo index.html e come\'e7ar pelo cabe\'e7alho: criamos um <header> logo abaixo do <body> e colocamos o t\'edtulo da nossa p\'e1gina dentro de um <h1>.\par
+Depois criaremos a lista de postagens: abrimos um elemento section e dentro dele adicionamos outro <header> contendo um <h2>. Notem que eu posso ter mais de um <header> na p\'e1gina.\par
+Para criar nossa postagem adicionamos um <article> com um <header> e um <h3>.\par
+O \'faltimo passo desta etapa \'e9 criar um rodap\'e9 para nossas informa\'e7\'f5es de contato: crie um elemento footer antes de fechar o </body>.\par
+N\'e3o se preocupe com o layout e com conte\'fado da p\'e1gina, n\'f3s vamos tratar isso mais a frente.\par
+\par
+\ul\b\fs28 Textos e links\par
+\ulnone\b0\fs22 A cria\'e7\'e3o do HTML foi motivada pela necessidade de compartilhar textos e documentos, e mesmo depois de quase 30 anos, com toda a evolu\'e7\'e3o da web, isso ainda representa uma boa parte do conte\'fado da web.\par
+\par
+J\'e1 falamos anteriormente sobre os elementos h1-h6 e, eles s\'e3o essenciais para nos indicar visualmente a import\'e2ncia e localiza\'e7\'e3o de se\'e7\'f5es de texto na p\'e1gina, mas para textos maiores e mais densos usamos o elemento p.\par
+\par
+O <p> representa um par\'e1grafo, mas ele n\'e3o suporta apenas texto, podemos adicionar imagens, c\'f3digo, v\'eddeos e v\'e1rios outros tipos de conte\'fado dentro dele.\par
+\par
+Um outro elemento interessante e extremamente necess\'e1rio na web \'e9 o <a> - que significa anchor/\'e2ncora, ele representa um hyperlink, \'e9 ele que interliga v\'e1rios conte\'fados e p\'e1ginas na web.\par
+\par
+O elemento a tem v\'e1rios atributos, mas vamos focar em dois, o href e o target.\par
+\par
+O href representa o hyperlink para onde sua \'e2ncora aponta, pode ser uma p\'e1gina do seu ou de outro site, um e-mail e at\'e9 mesmo um telefone, os dois \'faltimos precisam dos prefixos mailto: e tel:, respectivamente.\par
+\par
+O target neste momento vai servir para nos ajudar a abrir nossos links em outra aba do navegador usando o valor _blank.\par
+\par
+Pr\'e1tica\par
+Vamos adicionar um texto fict\'edcio a nossa postagem: logo ap\'f3s o fechamento do </header> vamos adicionar um elemento p e inserir um texto que vamos retirar do site lipsum.com\par
+\par
+E em alguma parte deste texto vamos adicionar um hiperlink para outra p\'e1gina e um para nosso e-mail.\par
+\par
+Criarei um hyperlink para meu perfil no LinkedIn: adicione o hyperlink no atributo href e o valor _blank no atributo target, assim o link ser\'e1 aberto em outra aba. E em algum outro lugar do texto adicionarei meu e-mail e um link para ele, desta forma: <a href="mailto:lucas@vilaboim.com" target="_blank">lucas@vilaboim.com</a>\par
+\par
+Imagens\par
+A web tamb\'e9m \'e9 feita de imagens e para represent\'e1-las temos o elemento <img>, ele \'e9 um daqueles elementos sem tag de fechamento.\par
+\par
+O elemento img \'e9 bem simples, contendo apenas 2 atributos pr\'f3prios, o src e o alt.\par
+\par
+O src \'e9 obrigat\'f3rio e guarda o caminho para a imagem que voc\'ea quer mostrar na p\'e1gina.\par
+\par
+O alt n\'e3o \'e9 obrigat\'f3rio mas \'e9 altamente recomendado por melhorar a acessibilidade, ele mostra a descri\'e7\'e3o da imagem caso ela n\'e3o carregue e leitores de tela usam esse atributo para descrever a imagem para o usu\'e1rio saber o que ela significa.\par
+\par
+Pr\'e1tica\par
+Vamos adicionar uma imagem ao cabe\'e7alho da p\'e1gina e uma imagem a postagem.\par
+\par
+Primeiro vamos colocar as imagens na pasta do nosso projeto. Para a imagem do cabe\'e7alho eu escolhi uma foto minha com 100 pixels de largura e 100 pixels de altura e para a imagem da postagem eu procurei por html code no site Unsplash, escolhi uma das imagens e deixei ela com 960 pixels de largura por 322 pixels de altura.\par
+\par
+Dentro do primeiro <header> da p\'e1gina e antes do <h1> iremos adicionar um elemento img e no atributo src colocamos o caminho para a nossa foto, /lucas-vilaboim.jpg, e o atributo alt deve conter um significado para a imagem, como no meu caso \'e9 uma ilustra\'e7\'e3o, colocarei Ilustra\'e7\'e3o do rosto de Lucas Vilaboim.\par
+\par
+E dentro do <header> do <article> vamos fazer a mesma coisa, mas agora depois do <h3>, e no atributo alt colocaremos Editor de texto mostrando c\'f3digos HTML.\par
+\par
+Listas\par
+Os \'faltimos elementos que veremos neste m\'f3dulo s\'e3o os relacionados a listas: <ul>, <ol> e <li>.\par
+\par
+Listas servem para agrupar uma cole\'e7\'e3o de itens, como uma lista de ingredientes ou, como ser\'e1 no nosso caso, uma lista com contatos.\par
+\par
+O elemento ul cria uma lista n\'e3o ordenada, onde a ordem dos elementos n\'e3o \'e9 importante, e \'e9 representada com pontos, c\'edrculos ou quadrados.\par
+\par
+O <ol> serve para criar lista ordenadas, nessas a ordem importa, portanto elas s\'e3o representadas com n\'fameros, algarismos romanos ou letras.\par
+\par
+E o elemento li \'e9 um item dentro de uma dessas listas. Um <li> pode conter v\'e1rios tipos de conte\'fados, como par\'e1grafos, imagens e at\'e9 outras listas.\par
+\par
+Pr\'e1tica\par
+Adicionaremos uma lista de contatos ao rodap\'e9 da nossa p\'e1gina, e para isso usaremos tamb\'e9m o elemento a que vimos anteriormente.\par
+\par
+Crie um elemento ul e dentro dele adicione um <li> com um elemento a, no atributo href adicione o link de alguma rede social que voc\'ea mantenha e, no conte\'fado da \'e2ncora coloque o nome dessa rede.\par
+\par
+ \par
+}
+ 
